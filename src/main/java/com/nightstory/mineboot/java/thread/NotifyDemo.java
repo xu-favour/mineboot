@@ -18,10 +18,9 @@ public class NotifyDemo {
     }
 
 }
-class ThreadA extends Thread implements Cloneable{
+class ThreadA extends Thread{
     @Override
     public void run() {
-        super.run();
         Object object = new Object();
         synchronized (this){
             System.out.println(Thread.currentThread().getId() + "start" + System.currentTimeMillis());

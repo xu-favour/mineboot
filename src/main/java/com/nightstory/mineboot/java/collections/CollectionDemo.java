@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class CollectionDemo {
     public static void main(String[] args) {
-//       testLinktest();
+       testLinktest();
         TreeMap<String,String> treeMap = new TreeMap<>(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -23,7 +23,7 @@ public class CollectionDemo {
 
 
 
-
+    //插入顺序和访问顺序
     public static void testLinktest(){
         LinkedHashMap<Integer,String> linkedHashMap = new LinkedHashMap(16,0.75f,true);
         linkedHashMap.put(1, "item1");

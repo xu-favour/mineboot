@@ -22,9 +22,9 @@ public class ThreadStatus {
                 System.out.println("i am a thread and id is " + Thread.currentThread().getName());
             }
         });
-        td.setPriority(10);
+        td.setPriority(10);        System.out.println(Thread.currentThread().getThreadGroup() + "..main-----end");
+
         td.start();
-        System.out.println(Thread.currentThread().getThreadGroup() + "..main-----end");
 
     }
 

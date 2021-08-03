@@ -11,12 +11,19 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 public class SummaryClass {
 
+    List c1 = new ArrayList<Integer>();
+    List c2 = new ArrayList<String>();
+
     public static void main(String[] args) {
 
         LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
         ConcurrentSkipListMap<String,String> concurrentSkipListMap = new ConcurrentSkipListMap<>();
         ConcurrentSkipListSet concurrentSkipListSet = new ConcurrentSkipListSet();
-
+//        Class c1 = new ArrayList<Integer>().getClass();
+//        Class c2 = new ArrayList<String>().getClass();
+        SummaryClass s = new SummaryClass();
+        System.out.println(s.c1.getClass() == s.c2.getClass());
+        System.out.println(s.c1.getClass());
 
     }
 

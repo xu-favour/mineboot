@@ -1,4 +1,3 @@
-package com.nightstory.mineboot.java.thread;
 
 import java.util.concurrent.TimeUnit;
 

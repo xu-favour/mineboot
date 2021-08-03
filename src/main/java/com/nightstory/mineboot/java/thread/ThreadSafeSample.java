@@ -16,7 +16,8 @@ public class ThreadSafeSample {
 	public static void main(String[] args) throws InterruptedException {
     	ThreadSafeSample sample = new ThreadSafeSample();
     	Thread threadA = new Thread(){
-        	public void run(){
+        	@Override
+			public void run(){
             	sample.nonSafeAction();
         	}
     	};

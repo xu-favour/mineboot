@@ -13,16 +13,19 @@ public class IoLearnDemo {
     // 字节流 字符流
 
     public static void main(String[] args) throws Exception{
-        String line = "helloworld!";
+        String line = "hello world!";
         OutputStream out = new FileOutputStream(".//out.txt");
         out.write(line.getBytes());
         InputStream in = new FileInputStream(".//out.txt");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        String temp = null;
-        while ((temp = reader.readLine()) != null){
-            System.out.println(temp + "**" + temp.length());
-            System.out.println("**");
-        }
+        byte[] buffer = new byte[1024];
+        int read = in.read(buffer);
+        System.out.println(read);
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+//        String temp = null;
+//        while ((temp = reader.readLine()) != null){
+//            System.out.println(temp + "**" + temp.length());
+//            System.out.println("**");
+//        }
 //        String str = reader.readLine();
 //        System.out.println("readLine 读出后的长度: "+str.length()+"     readLine读的结果: "+str);
 

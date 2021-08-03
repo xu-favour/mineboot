@@ -10,6 +10,16 @@ import java.util.concurrent.*;
 public class QueueDemo {
 
 
+    /**
+     * BlockingQueue 对插入操作、移除操作、获取元素操作提供了四种不同的方法用于不同的场景中使用：
+     * 1、抛出异常；
+     * 2、返回特殊值（null 或 true/false，取决于具体的操作）；
+     * 3、阻塞等待此操作，直到这个操作成功；
+     * 4、阻塞等待此操作，直到成功或者超时指定时间。
+     */
+
+
+
 
     public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
 
@@ -65,14 +75,10 @@ public class QueueDemo {
      */
     public void arrayBlockingQueueTest(){
         ArrayBlockingQueue<Integer> arrayBlockingQueue = new ArrayBlockingQueue<>(10);
-        for(int i = 0; i < 20; i++){
-            arrayBlockingQueue.offer(i);
-        }
-        Integer a = arrayBlockingQueue.poll();
-        while (a != null){
-            System.out.println(a);
-            a = arrayBlockingQueue.poll();
-        }
+        arrayBlockingQueue.add(0); //if full,thew exception
+        arrayBlockingQueue.remove(0);
+
+
 
     }
 
@@ -88,6 +94,15 @@ public class QueueDemo {
         }
 
     }
+
+
+
+
+
+
+
+
+
 
 
     /**
